@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denkel Tour and travel Agency</title>
+<link rel="stylesheet" href="tour.css">    
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #395ec5;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #2b7fd8;
+    }
+    
+      
+</style>
+<body>
+ 
+    <header>
+        <div id="menu-bar" class="bars"></div>
+        <a href="#"class="logo"><span>T</span>ravel</a>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#book">Book</a>
+            <a href="#package">Package</a>
+            <a href="#services">Services</a>
+            <a href="#Gallery">Gallery</a>
+            <a href="#Review">Review</a>
+            <a href="#Contact">Contact</a>
+            
+</nav>
+<div style="display: flex;" class="search"  >
+    <input type="text" placeholder="search...">
+    <img src="search.png" alt="search" width="30px" height="30px" >
+<div class="icons">
+    <i class="search" id="search-btn"></i>
+    <i class="user" id="login-btn"></i>
+</div>
+</div>
+<form action=" "class="search-bar-container">
+    <input type="search" id="search-bar" placeholder="search here...">
+    <label for="search-bar" class="search"></label>
+</form>
+</header>
+<div class="login-form-container">
+    <i class="fas fa-time" id="form-close"></i>
+   <form action="">
+       <h3>login</h3>
+       <input type="email" class="box" placeholder="enter your email">
+       <input type="password" class="box" placeholder="enter your password">
+       <input type="submit" value="login now" class="btn">
+       <input type="checkbox" id="remember">
+       <label for="remember">remember me</label>
+       <p>forget password? <a href="#">click here</a></p>
+       <p>don't have and account? <a href="#">register now</a></p>
+   </form>
+</div>
+ <section class="home" id="home">
+   <div class="content">
+       <h3> <span style="color: green;">ETH</span> <span style="color: yellow;">IO</span><span style="color: red;">PIA</span>  </h3>
+       <p>COME TO THE LAND OF HUMAN ORIGIN </p>
+       <a href="#" class="btn">discover more</a>
+   </div>
+
+<div class="controls">
+   <span class="vid-btn active" data-src="etvid.mp4"></span>
+   <span class="vid-btn" data-src="viet.mp4"></span>
+   <span class="vid-btn" data-src="etvid.mp4"></span>
+   <span class="vid-btn" data-src="viet.mp4"></span>
+   </div>
+
+<div class="video-container">
+    <video src="viet (1).mp4" id="video-slider" loop autoplay muted></video>
+</div>
+</section>
+<section class="book" id="book">
+    <h1 class="heading">
+    <span>b</span> 
+    <span>o</span>
+    <span>o</span>
+    <span>k</span>
+    <span class="space"> </span>
+    <span>n</span>
+    <span>o</span>
+    <span>w</span>
+    </h1>
+<div class="row">
+     <div class="image">
+          <img src="book.jpg" alt="Ethiopia all tourism attraction" width="400" height="450">
+        </div>
+        <div class="container">
+            <h2>Flight Booking</h2>
+            <form id="bookingForm" onsubmit="submitForm(event)">
+                <label for="departure">Departure City:</label>
+                <input type="text" id="departure" name="departure" required>
+    
+                <label for="destination">Destination City:</label>
+                <input type="text" id="destination" name="destination" required>
+    
+                <label for="date">Departure Date:</label>
+                <input type="date" id="date" name="date" required>
+    
+                <label for="passengers">Number of Passengers:</label>
+                <input type="number" id="passengers" name="passengers" min="1" required>
+    
+                <button type="submit">Book Now</button>
+            </form>
+        </div></br>
+        <div class="container">
+            <h2>Hotel Booking</h2>
+            <form id="bookingForm" onsubmit="submitForm(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="checkIn">Check-In Date:</label>
+                <input type="date" id="checkIn" name="checkIn" required>
+    
+                <label for="checkOut">Check-Out Date:</label>
+                <input type="date" id="checkOut" name="checkOut" required>
+    
+                <label for="rooms">Number of Rooms:</label>
+                <input type="number" id="rooms" name="rooms" min="1" required>
+    
+                <button type="submit">Book Now</button>
+            </form>
+        </div></br>
+        <form action="">
+            <div class="inputBox">
+            <h3>where to</h3>
+            <input type="text" placeholder="place name">
+            </div>
+            <div class="inputBox">
+            <h3>how many</h3>
+            <input type="number" placeholder="number of guests">
+            </div>
+            <div class="inputBox">
+            <h3>arrivals</h3>
+            <input type="date">
+            </div>
+            <div class="inputBox">
+            <h3>leaving</h3>
+            <input type="date">
+            </div>
+            <input type="submit" class="btn" value="book now">
+            </form>
+            </div>
+    </div>
+   
+
+    <section class="package" id="package">
+            <h1 class="heading">
+            <span>p</span>
+            <span>a</span>
+            <span>c</span>
+            <span>k</span>
+            <span>a</span>
+            <span>g</span>
+            <span>e</span>
+            <span>s</span>
+            </h1>
+    </section>
+    <div class="box-container">
+    <div class="box">
+    <img src="images/p-1.jpg" alt="">
+    <div class="content">
+        <h3 style="font-size: 50px"> </i>Oromia  </h3>
+        <p style="font-size: 18px" >
+            Oromia, Ethiopia's enchanting region, beckons with its diverse landscapes and vibrant culture.
+            Nestled in the heart of the East African Rift Valley, Oromia boasts majestic mountains, lush highlands,
+            and sprawling savannahs. Immerse yourself in the rich heritage of its people, explore ancient ruins,
+            and witness the captivating traditions that weave through this tapestry of nature and history. 
+            Oromia invites you to embark on an unforgettable journey of discovery.</p>
+        <div class="stars">
+            <img src="tuli.jpg" >
+            <img src="Wenchi.jpg" >
+            <img src="images.jpeg" >
+            <img src="lion.jpg" >
+        </div>
+<div class="price">$90.00 <span>$120.00</span> </div>
+<a href="#" class="btn">book now</a>
+</div>
+</div>
+<div class="box">
+    <img src="images/p-2.jpg" alt="">
+    <div class="content">
+        <h3 style="font-size: 50px">  Amhara </h3>
+        <p style="font-size: 18px;"> Amhara, a captivating destination in Ethiopia, unveils a mesmerizing tapestry of wonders. 
+            Nestled in the northern highlands, it embraces the mystical allure of Lake Tana and the 
+            Blue Nile Falls. Roam ancient rock-hewn churches in Lalibela, where history echoes in the air.
+             Amhara invites you to traverse its timeless landscapes, where cultural marvels and natural 
+             splendors intertwine, promising an odyssey of enchantment.</p>
+        <div class="stars">
+       <img src="fasil.jpg" alt=""> <img src="images (3).jpeg" alt="">
+       <img src="images (11).jpeg" alt="">
+       <img src="semen.jpg" >
+       <img src="" alt="">
+        </div>
+<div class="price">$90.00 <span>$150.00</span> </div>
+<a href="#" class="btn">book now</a>
+</div>
+</div>
+<div class="box">
+    <img src="images/p-3.jpg" alt="">
+    <div class="content">
+        <h3 style="font-size: 50px">  Southern Ethiopia </h3>
+        <p style="font-size: 18px;">
+            Embark on a captivating odyssey through Ethiopia's diverse landscapes and cultures. 
+            Arba Minch beckons with its twin lakes, while Hawassa offers serenity by the shores of Lake Hawassa. 
+            Omo Valley unveils ancient tribes and traditions, Sheka enchants with lush rainforests, and 
+            Gurage captivates with its vibrant communities. This kaleidoscope of destinations promises an unforgettable
+            tapestry of experiences in the heart of Ethiopia's rich heritage.</p>
+        <div class="stars">
+            <img src="omo.jpg" > <img src="cor.jpg" > 
+            <img src="gojo.jpg" width="60" height="60">
+            <img src="images (12).jpeg" >
+        </div>
+<div class="price">$100.00 <span>$190.00</span> </div>
+<a href="#" class="btn">book now</a>
+</div>
+</div>
+<div class="box">
+   
+    <div class="content">
+        <h3 style="font-size: 50px">  Afar </h3>
+        <p style="font-size: 18px;">
+            Afar, Ethiopia's captivating frontier, unfolds a surreal tapestry of wonders. 
+            Nestled in the Great Rift Valley, it's a landscape of otherworldly landscapes,
+            from the desolate Danakil Depression to the ancient lava lakes. Immerse yourself 
+            in the rich Afar culture amid simmering hot springs and salt flats. 
+            This is a journey into the heart of Ethiopia's untamed and extraordinary beauty.
+            
+            </p>
+        <div class="stars">
+            <img src="ertale.jpg" alt="">
+            <img src="images (20).jpeg" alt="">
+            <img src="" alt="">
+        </div>
+<div class="price">$130.00 <span>$220.00</span> </div>
+<a href="#" class="btn">book now</a>
+</div>
+</div>
+<div class="box">
+    <img src="images/p-1.jpg" alt="">
+    <div class="content">
+        <h3 style="font-size: 50px" >  Addis Abeba</h3>
+        
+        <p style="font-size: 18px;">Addis Ababa, the pulsating heart of Ethiopia, cradles a blend of modernity and rich history. 
+            Nestled in the Ethiopian highlands, this vibrant capital city boasts lively markets, museums,
+             and the iconic African Union headquarters. Explore bustling streets, relish Ethiopian cuisine,
+              and feel the rhythm of a city that embodies the nation's dynamic spirit. Addis Ababa invites 
+              you to a kaleidoscope of experiences in the heartland of East Africa.</p>
+        <div class="stars">
+            <img src="leghar.jpg" >
+            <img src="la.svg.jpeg" >
+            <img src="addis.jpg" >
+            <img src="sheraton.webp" >
+        </div>
+<div class="price">$90.00 <span>$120.00</span> </div>
+<a href="#" class="btn">book now</a>
+</div>
+</div>
+<section class="services" id="services">
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+        </h1>
+        <div class="box-container">
+            <div class="box">
+                
+            <h3 style="font-size: 18px;"><img src="hotel.jpg" alt="" width="100" height="120">affordable hotels</h3>
+            <p style="font-size: 14px;">Hyatt regency,sheraton Addis,Hilton Addis,skylight,
+                Capital hotel and spa,Marriott,Ghion hoteland intercontinental hotel </p>
+            </div>
+        <div class="box">
+            
+            <h3 style="font-size: 18px;"> <img src="food.jpg" width="100" height="120"> food and drinks</h3>
+            <p style="font-size: 14px;">Continental breakfast wi pasta, burgers, salads, and sandwiches.th pastries, cereals, and fruits.
+                Ethiopian breakfast options, including injera, scrambled eggs, and local fruits.
+                Coffee and tea service.
+                pasta, burgers, salads, and sandwiches.
+                doro wat, kitfo, and tibs.
+                cuisines such as Italian, Asian, or Mediterranean.
+            </p>
+            </div>
+        <div class="box">
+           
+            <h3 style="font-size: 18px;"><img src="guide .jpg" width="100" height="120">safty guide</h3>
+            <p style="font-size: 14px;">
+                A safe guide is a crucial figure in ensuring the security and well-being 
+                of individuals during activities or travels. Responsible for risk assessment, 
+                emergency planning, and clear communication, they prioritize safety, fostering 
+                trust in diverse environments. A skilled safe guide combines knowledge and leadership
+                 to create secure experiences, ensuring the welfare of those under their care.</p>
+            </div>
+        <div class="box">
+            
+            <h3 style="font-size: 18px;"> <img src="worldround.jpg" width="100" height="120"> around the world</h3>
+            <p style="font-size: 14px;">World Around Tour and Travel is your gateway to extraordinary adventures.
+                 We specialize in crafting seamless and unforgettable travel experiences, 
+                 blending cultural immersion, adventure, and relaxation. Our expertly curated 
+                 itineraries promise personalized service, ensuring each moment becomes a cherished 
+                 memory. Embark on a journey with us, discovering the world's wonders and creating 
+                 timeless stories along the way. </p>
+            </div>
+            <div class="box">
+                
+                <h3 style="font-size: 18px;"><img src="fast.jpg" width="100" height="120"> fastest travel</h3>
+                <p style="font-size: 14px;">
+                    Embark on unparalleled speed and luxury with World Around Tour and Travel's fastest travel options. 
+                    From private jets to high-speed trains, we redefine efficiency without compromising comfort. Experience swift,
+                    stylish journeys that elevate your travel experience. Your fastest adventure begins with us—discover the world 
+                    in unprecedented speed and sophistication. </p>
+                </div>
+                <div class="box">
+                    
+                    <h3 style="font-size: 18px;"><img src="advent.webp" width="100"
+                        height="120"> adventures</h3>
+                    <p style="font-size: 14px;">Unleash your inner adventurer with World Around Tour and Travel. 
+                        Dive into heart-pounding experiences as you explore untamed landscapes,
+                         conquer peaks, and embrace the thrill of the unknown. Our curated adventures 
+                         promise excitement at every turn, from daring expeditions to immersive outdoor
+                          escapades. Join us for a journey where adrenaline meets exploration, creating
+                           memories that redefine the essence of adventure. Your next thrilling expedition
+                            begins with World Around Tour and Travel.
+                    </p>
+                    </div>
+        </div>
+</section>
+<section class="Gallery" id="Gallery">
+                <h1 class="heading">
+                <span>g</span>
+                <span>a</span>
+                <span>1</span>
+                <span>1</span>
+                <span>e</span>
+                <span>r</span>
+                <span>y</span>
+                </h1> 
+                <div class="box-container">
+            <div class="box">
+            <img src="" alt="">
+            <div class="content">
+            <h3>amazing places</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+            <a href="#" class="btn">see more</a>
+            </div>
+            <div class="box">
+                <img src="" alt="">
+                <div class="content">
+                <h3>amazing places</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <a href="#" class="btn">see more</a>
+            </div>
+            <div class="box">
+                <img src="images/g-3.jpg" alt="">
+                <div class="content">
+                <h3>amazing places</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
+                <a href="#" class="btn">see more</a>
+                </div>
+                <div class="box">
+                    <img src="images/g-4jpg" alt="">
+                    <div class="content">
+                    <h3>amazing places</h3>
+                    <p>Oromia, Ethiopia's largest region, features the stunning Bale Mountains National Park, 
+                        a haven for wildlife and trekking enthusiasts. Lake Langano offers serene landscapes, 
+                        while the vibrant city of Adama boasts hot springs. The historic city of Jimma showcases
+                         royal palaces, and the scenic Rift Valley adds to Oromia's diverse attractions.</p>
+                    <a href="#" class="btn">see more</a>
+                    </div>
+                    <div class="box">
+                        <img src="images/g-5jpg" alt="">
+                        <div class="content">
+                        <h3>amazing places</h3>
+                        <p>
+                            Harar in Ethiopia, recognized as the "City of Saints," charms with its ancient walled city.
+                             Explore vibrant markets, witness the unique hyena feeding ritual, and discover 82 mosques.
+                              Harar Jugol, a UNESCO World Heritage site, captivates with its rich history, winding alleys, 
+                              and the house of renowned poet Arthur Rimbaud.</p>
+                        <a href="#" class="btn">see more</a>
+                        </div>
+                        <div class="box">
+                            <img src="images/g-6jpg" alt="">
+                            <div class="content">
+                            <h3>amazing places</h3>
+                            <p>The Afar Region in Ethiopia boasts the otherworldly Danakil Depression,
+                                 a geological marvel with colorful sulfur springs, salt flats, and 
+                                 volcanic craters. The Afar Triangle, intersecting Ethiopia, Djibouti, 
+                                 and Eritrea, reveals a diverse landscape, from the Great Rift Valley
+                                  to the salt flats of Lake Assale, creating a mesmerizing destination.</p>
+                            <a href="#" class="btn">see more</a>
+                            </div>
+                            <div class="box">
+                                <img src="images/g-7jpg" alt="">
+                                <div class="content">
+                                <h3>amazing places</h3>
+                                <p>
+                                    The Amhara Region in Ethiopia is home to the awe-inspiring Lalibela,
+                                     a UNESCO World Heritage site with rock-hewn churches. The Simien 
+                                     Mountains National Park offers breathtaking landscapes and diverse wildlife.
+                                      Bahir Dar, situated on Lake Tana, showcases ancient monasteries, while 
+                                      Gondar boasts historic castles and medieval architecture.</p>
+                                <a href="#" class="btn">see more</a>
+                                </div>
+                               
+                </div>
+</section>
+<section class="Review" id="Review">
+    <h1 class="heading">
+    <span>r</span>
+    <span>e</span>
+    <span>v</span>
+    <span>i</span>
+    <span>e</span>
+    <span>w</span>
+    </h1>
+    <div class="swiper-container review-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="box" >
+                <img src="images/pic1.png" alt="">
+<h3 style="font-size: 16px;"> Ana Luis</h3>
+<p> "Exploring the historical route through Gondar and Axum provided a glimpse into Ethiopia's royal past. 
+    The castles of Gondar and the ancient obelisks of Axum were awe-inspiring. The local guides' knowledge
+     and passion for their history enriched our understanding of these remarkable sites." </p>
+
+<div class="stars">
+
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+    <div class="box" >
+    <img src="images/pic2.png" alt="">
+<h3 style="font-size: 16px;"> john deo</h3>
+<p> "The trek in the Simien Mountains was a highlight of our Ethiopian adventure. 
+    The breathtaking landscapes, the endemic wildlife, and the encounters with 
+    local villagers made this trek a once-in-a-lifetime experience. 
+    Camping under the stars was the perfect way to end each day." </p>
+<div class="stars">
+
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+    <div class="box" >
+    <img src="images/pic3.png" alt="">
+<h3 style="font-size: 16px;"> Henri Dominique</h3>
+<p> "Our tour of Addis Ababa was an incredible journey through time. 
+    The National Museum and Holy Trinity Cathedral were breathtaking,
+     and the Ethnological Museum offered a deep dive into Ethiopia's
+      rich cultural heritage. The locals' warmth and friendliness added
+       an extra layer to the historical wonders." </p>
+<div class="stars">
+
+</div>
+</div>
+</div>
+<div class="swiper-slide">
+    <div class="box" >
+    <img src="images/pic4.png" alt="">
+<h3 style="font-size: 16px;"> Liang Hong</h3>
+<p>"Our journey to the Omo Valley was a cultural extravaganza.
+     Meeting the diverse ethnic groups, witnessing their traditions,
+      and experiencing the colorful markets was a photographer's dream. 
+      The authenticity of the experiences made this trip unforgettable." </p>
+<div class="stars">
+
+</div>
+</div>
+</div>
+    </div>
+    </section>
+
+<section class="Contact" id="Contact">
+<h1 class="heading">
+<span>c</span>
+<span>o</span>
+<span>n</span>
+<span>t</span>
+<span>a</span>
+<span>c</span>
+<span>t</span>
+</h1>
+
+<div class="row">
+<div class="image">
+<img src="images/contact-img.svg|" alt="">
+</div>
+<form action="">
+    <div class="inputBox">
+        <input type="text" placeholder="name">
+        <input type="email" placeholder="email">
+
+    </div>
+    <div class="inputBox">
+        <input type="number" placeholder="number">
+        <input type="text" placeholder="subject">
+    </div>
+    <textarea name="message" id="" cols="30" rows="10"></textarea>
+    <input type="submit" class="btn" value="send message">
+</form>
+</section>
+<section class="swiper-container brand-container">
+    <div class="brand-slider">
+        <div class="swiper-wrapper">
+             <div class="swiper-slider">    
+                <img src="" alt="">
+                <div class="swiper-slider">    
+                    <img src="" alt=""><div class="swiper-slider">    
+                        <img src="" alt=""><div class="swiper-slider">    
+                            <img src="" alt=""><div class="swiper-slider">    
+                                <img src="" alt="">
+             </div>
+        </div>
+    </div>
+</section>
+<script src="js/tour.js"></script>
+<script>
+      function submitForm(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+            // Retrieve form values
+            var departure = document.getElementById("departure").value;
+            var destination = document.getElementById("destination").value;
+            var date = document.getElementById("date").value;
+            var passengers = document.getElementById("passengers").value;
+
+            // Perform basic validation (you can enhance this based on your requirements)
+            if (!departure || !destination || !date || !passengers) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Display booking information (you can modify this based on your needs)
+            var message = "Booking Details:\n\n";
+            message += "Departure City: " + departure + "\n";
+            message += "Destination City: " + destination + "\n";
+            message += "Departure Date: " + date + "\n";
+            message += "Number of Passengers: " + passengers + "\n";
+
+            alert(message);
+        }
+    
+    function submitForm(event) {
+            event.preventDefault(); // Prevent the form from submitting in the traditional way
+
+            // Retrieve form values
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var checkIn = document.getElementById("checkIn").value;
+            var checkOut = document.getElementById("checkOut").value;
+            var rooms = document.getElementById("rooms").value;
+
+            // Perform basic validation (you can enhance this based on your requirements)
+            if (!name || !email || !checkIn || !checkOut || !rooms) {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+            // Display booking information (you can modify this based on your needs)
+            var message = "Booking Details:\n\n";
+            message += "Name: " + name + "\n";
+            message += "Email: " + email + "\n";
+            message += "Check-In Date: " + checkIn + "\n";
+            message += "Check-Out Date: " + checkOut + "\n";
+            message += "Number of Rooms: " + rooms + "\n";
+
+            alert(message);
+        }
+</script>
+</body>
+</html>
